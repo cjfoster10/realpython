@@ -1,3 +1,5 @@
+#NOTE: You can also use the ":memory:" string to create a database in memory only
+
 with sqlite3.connect('roster.db') as connection:
   c = connection.cursor()
   c.execute("DROP TABLE IF EXISTS Roster")
