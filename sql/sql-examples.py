@@ -30,3 +30,22 @@ with sqlite3.connect('roster.db') as connection:
   c.execute("SELECT Name, Species, IQ FROM Roster WHERE IQ > 120")
   for row in c.fetchall():
     print(row)
+
+Basic SQL syntax:
+
+Create table:
+    cursor.execute("""CREATE TABLE population
+                (city TEXT, state TEXT, population INT)
+                """)
+Inserting:
+    INSERT INTO table_name (column1, column2, column3)
+    VALUES (value1, value2, value3);
+
+Updating:
+    UPDATE table_name
+    SET column1=value1
+    WHERE some_column=some_value;
+
+Deleting:
+    DELETE FROM table_name
+    WHERE some_column=some_value;
